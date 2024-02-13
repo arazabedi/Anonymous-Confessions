@@ -10,11 +10,8 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu'
-import { useSession } from 'next-auth/react'
-import AuthButton from './AuthButton'
 
 const Navbar = () => {
-  const { data } = useSession()
 
   return (
     <header className='bg-white dark:bg-neutral-950 sticky top-0 z-50'>
@@ -32,10 +29,6 @@ const Navbar = () => {
                   Posts
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <AuthButton />
             </NavigationMenuItem>
 
             <NavigationMenuItem>

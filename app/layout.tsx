@@ -5,7 +5,6 @@ import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
 
 import { ThemeProvider } from '@/components/ThemeProvider'
-import AuthProvider from '@/components/AuthProvider'
 import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
@@ -24,14 +23,12 @@ function MainLayout({ children }) {
       <body className={GeistSans.className}>
         <ThemeProvider attribute='class' defaultTheme='system'>
           <main className='min-h-screen'>
-            <AuthProvider>
               <AtomicState>
                 <FetchConfig baseUrl='/api'>
                   <Navbar />
                   <div className='max-w-7xl mx-auto p-4'>{children}</div>
                 </FetchConfig>
               </AtomicState>
-            </AuthProvider>
           </main>
         </ThemeProvider>
       </body>
