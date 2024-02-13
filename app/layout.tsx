@@ -16,8 +16,8 @@ function MainLayout({ children }) {
   return (
     <html suppressHydrationWarning>
       <head>
-        <title>Next.js starter</title>
-        <meta name='description' content='A Starter with Next.js' />
+        <title>Leeds RAG Fashion Show Anonymous Confessions</title>
+        <meta name='description' content='LRAG Anonymous Confessions' />
       </head>
 
       <body className={GeistSans.className}>
